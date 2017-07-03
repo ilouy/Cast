@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PJ3-Fc-eKe">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdg-MQ-Uff">
+                                <rect key="frame" x="0.0" y="50" width="414" height="642"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iO3-ya-d9J">
+                                <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                <gestureRecognizers/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Uic-N8-fh6"/>
+                                    <action selector="searchBarPressed" destination="BYZ-38-t0r" eventType="editingDidBegin" id="vOR-ys-bMf"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMv-2O-vCf">
+                                <rect key="frame" x="346" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="HeM-4d-W0g"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmb-UG-5G5">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="8Lx-kL-rTc">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rat-pg-GfS">
+                                            <rect key="frame" x="20" y="10.666666666666664" width="27" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="goBack"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFu-U4-I3b"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sGb-Ar-UG8"/>
+                                    <barButtonItem style="plain" id="hTN-Mr-GYe">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wq5-qE-xYC">
+                                            <rect key="frame" x="184" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Media"/>
+                                            <connections>
+                                                <segue destination="6SN-hj-2X0" kind="show" id="95l-M4-LMK"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Sjz-Ps-MRe"/>
+                                    <barButtonItem style="plain" id="UbM-HB-b91">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JTl-az-J3H">
+                                            <rect key="frame" x="367" y="10.666666666666664" width="27" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="goForward"/>
+                                            <connections>
+                                                <action selector="forwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xig-I0-gy6"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jdg-MQ-Uff" firstAttribute="top" secondItem="lMv-2O-vCf" secondAttribute="bottom" id="2ea-ss-pjl"/>
+                            <constraint firstItem="lMv-2O-vCf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3LT-ih-uQS"/>
+                            <constraint firstAttribute="trailing" secondItem="hmb-UG-5G5" secondAttribute="trailing" id="8UM-Ss-CtP"/>
+                            <constraint firstAttribute="trailing" secondItem="jdg-MQ-Uff" secondAttribute="trailing" id="CJK-Bg-Qdm"/>
+                            <constraint firstItem="hmb-UG-5G5" firstAttribute="top" secondItem="jdg-MQ-Uff" secondAttribute="bottom" id="PQK-B9-apT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jdg-MQ-Uff" secondAttribute="bottom" constant="44" id="ToH-7A-nW6"/>
+                            <constraint firstItem="hmb-UG-5G5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y2p-0f-JVT"/>
+                            <constraint firstItem="iO3-ya-d9J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d25-Pw-Zxq"/>
+                            <constraint firstItem="jdg-MQ-Uff" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="glB-eU-vFo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hmb-UG-5G5" secondAttribute="bottom" id="hbY-Xl-9mO"/>
+                            <constraint firstItem="iO3-ya-d9J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lyH-vX-DIc"/>
+                            <constraint firstItem="lMv-2O-vCf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="t0y-RE-LZo"/>
+                            <constraint firstItem="iO3-ya-d9J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yjq-dy-nlP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IH4-Mo-Zsf"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="lMv-2O-vCf" id="T2r-3j-Ibs"/>
+                        <outlet property="searchBar" destination="iO3-ya-d9J" id="Mll-7e-6yQ"/>
+                        <outlet property="searchBarTrailingConstraint" destination="yjq-dy-nlP" id="90r-tL-NEm"/>
+                        <outlet property="webView" destination="jdg-MQ-Uff" id="JSc-x4-0Cu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.2" y="137.18140929535232"/>
+        </scene>
+        <!--Media Table View Controller-->
+        <scene sceneID="DsE-GR-8sd">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="6SN-hj-2X0" customClass="MediaTableViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dI5-Ol-1pl"/>
+                        <viewControllerLayoutGuide type="bottom" id="UKh-hV-zII"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0xN-EG-A7w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-3K-X0B">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" id="e3l-F5-xdF" customClass="MediaTableViewCell" customModule="Cast" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3l-F5-xdF" id="avJ-MZ-X5w">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXk-jW-rzl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VXk-jW-rzl" firstAttribute="top" secondItem="avJ-MZ-X5w" secondAttribute="top" id="JFz-3s-PXa"/>
+                                                <constraint firstItem="VXk-jW-rzl" firstAttribute="leading" secondItem="avJ-MZ-X5w" secondAttribute="leading" id="Lof-mU-m2d"/>
+                                                <constraint firstAttribute="trailing" secondItem="VXk-jW-rzl" secondAttribute="trailing" id="Ubm-KG-eo4"/>
+                                                <constraint firstAttribute="bottom" secondItem="VXk-jW-rzl" secondAttribute="bottom" id="y8c-zD-KNn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="videoURL" destination="VXk-jW-rzl" id="WLX-3P-ppb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="C0b-3K-X0B" firstAttribute="leading" secondItem="0xN-EG-A7w" secondAttribute="leading" id="1Ak-4l-gxc"/>
+                            <constraint firstItem="C0b-3K-X0B" firstAttribute="top" secondItem="dI5-Ol-1pl" secondAttribute="bottom" id="CCj-3C-OiI"/>
+                            <constraint firstAttribute="trailing" secondItem="C0b-3K-X0B" secondAttribute="trailing" id="g9X-Dy-7EH"/>
+                            <constraint firstItem="UKh-hV-zII" firstAttribute="top" secondItem="C0b-3K-X0B" secondAttribute="bottom" id="kA7-RI-uzm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="C0b-3K-X0B" id="R67-20-cZx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELN-Rg-IZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2714.4927536231885" y="134.5108695652174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YeK-uD-QJG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PJ3-Fc-eKe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Jm-vy-soQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LRm-hx-FAr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvk-MU-DWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goBack" width="23" height="23"/>
+        <image name="goForward" width="23" height="23"/>
+    </resources>
+</document>
